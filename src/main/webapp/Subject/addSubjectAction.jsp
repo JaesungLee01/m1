@@ -4,7 +4,9 @@
 <%@ page import = "java.util.*" %>
 <%@ page import = "java.sql.*" %>
 
-<%
+<%	
+	request.setCharacterEncoding("utf-8");
+
 	if(request.getParameter("subjectName") == null
 		|| request.getParameter("subjectTime") == null
 		|| request.getParameter("subjectName").equals("")
@@ -19,7 +21,7 @@
 	
 	SubjectDao subDao = new SubjectDao();
 	Subject subject = new Subject();
-	subject.setSubjecName(subjectName);
+	subject.setSubjectName(subjectName);
 	subject.setSubjectTime(subjectTime);
 	
 	int row = subDao.insertSubject(subject);

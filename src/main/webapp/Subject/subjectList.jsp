@@ -5,6 +5,7 @@
 <%@ page import = "java.util.*" %>
 <%@ page import = "java.sql.*" %>
 <%
+	
 	int currentPage = 1;
 	if(request.getParameter("currentPage") != null){
 		currentPage = Integer.parseInt(request.getParameter("currentPage"));
@@ -52,7 +53,7 @@
 					<%=s.getSubjectNo() %>
 				</td>
 				<td>
-					<%=s.getSubjecName() %>
+					<%=s.getSubjectName() %>
 				</td>
 				<td>
 					<%=s.getSubjectTime() %>
@@ -67,7 +68,7 @@
 					<a href="<%=request.getContextPath()%>/Subject/modifySubject.jsp" >수정</a>
 				</td>
 				<td>
-					<a href="<%=request.getContextPath()%>/Subject/minuteSubject.jsp" >삭제</a>
+					<a href="<%=request.getContextPath()%>/Subject/deleteSubjectAction.jsp" >삭제</a>
 				</td>
 			</tr>
 		<%

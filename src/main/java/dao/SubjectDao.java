@@ -21,7 +21,7 @@ public class SubjectDao {
 		while(listRs.next()) {
 			Subject s = new Subject();
 			s.setSubjectNo(listRs.getInt("subjectNo"));
-			s.setSubjecName(listRs.getString("subjectName"));
+			s.setSubjectName(listRs.getString("subjectName"));
 			s.setSubjectTime(listRs.getInt("subjectTime"));
 			s.setUpdatedate(listRs.getString("updatedate"));
 			s.setCreatedate(listRs.getString("createdate"));
@@ -34,8 +34,8 @@ public class SubjectDao {
 		int row = 0;
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConnection();
-		PreparedStatement Stmt = conn.prepareStatement("INSERT INTO subject(subject_name, subject_time, updatedate, createdate) VALUES(?,?,NOW(),NOW())");
-		Stmt.setString(1, subject.getSubjecName());
+		PreparedStatement Stmt = conn.prepareStatement("INSERT INTO subject(subject_name, subject_time, updatedate, createdate) VALUES(?,?,NOW(),NOW()");
+		Stmt.setString(1, subject.getSubjectName());
 		Stmt.setInt(2, subject.getSubjectTime());
 		row = Stmt.executeUpdate();
 		
@@ -59,7 +59,7 @@ public class SubjectDao {
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConnection();
 		PreparedStatement Stmt = conn.prepareStatement("UPDATE subject SET subject_name=?, subject_time = ?, updatedate = NOW() WHERE subject_no = ?");
-		Stmt.setString(1, subject.getSubjecName());
+		Stmt.setString(1, subject.getSubjectName());
 		Stmt.setInt(2, subject.getSubjectTime());
 		Stmt.setInt(3, subject.getSubjectNo());
 		
@@ -77,7 +77,7 @@ public class SubjectDao {
 		if(Rs.next()) {
 			subject = new Subject();
 			subject.setSubjectNo(Rs.getInt("subjectNo"));
-			subject.setSubjecName(Rs.getString("subjectName"));
+			subject.setSubjectName(Rs.getString("subjectName"));
 			subject.setSubjectTime(Rs.getInt("subjectTime"));
 			subject.setUpdatedate(Rs.getString("updatedate"));
 			subject.setCreatedate(Rs.getString("createdate"));

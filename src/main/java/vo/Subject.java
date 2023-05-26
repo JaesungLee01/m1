@@ -2,7 +2,7 @@ package vo;
 
 public class Subject {
 	private int subjectNo;
-	private String subjecName;
+	private String subjectName;
 	private int subjectTime;
 	private String updatedate;
 	private String createdate;
@@ -12,11 +12,11 @@ public class Subject {
 	public void setSubjectNo(int subjectNo) {
 		this.subjectNo = subjectNo;
 	}
-	public String getSubjecName() {
-		return subjecName;
+	public String getSubjectName() {
+		return subjectName;
 	}
-	public void setSubjecName(String subjecName) {
-		this.subjecName = subjecName;
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
 	}
 	public int getSubjectTime() {
 		return subjectTime;
@@ -36,4 +36,5 @@ public class Subject {
 	public void setCreatedate(String createdate) {
 		this.createdate = createdate;
 	}
+	
 }
