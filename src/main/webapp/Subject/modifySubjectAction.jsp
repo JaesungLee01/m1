@@ -4,7 +4,6 @@
 <%@ page import="java.util.*" %>
 <%
 	request.setCharacterEncoding("utf-8");
-	
 	if(request.getParameter("subjectNo") == null
 			|| request.getParameter("subjectNo").equals("")){
 		response.sendRedirect(request.getContextPath()+"/Subject/subjectList.jsp");
@@ -25,6 +24,7 @@
 	
 	String subjectName = request.getParameter("subjectName");
 	int subjectTime = Integer.parseInt(request.getParameter("subjectTime"));
+	System.out.printf("test %s, %s", subjectName, subjectTime);
 	
 	SubjectDao subDao = new SubjectDao();
 	
@@ -38,7 +38,7 @@
 	if(row == 1){
 		System.out.println("과목수정성공");
 	}
-	response.sendRedirect(request.getContextPath()+"/Subject/subjectOne.jsp?subjectNo="+subjectNo);
+	response.sendRedirect(request.getContextPath()+"/Subject/subjectList.jsp?subjectNo="+subjectNo);
 	
 %>
 

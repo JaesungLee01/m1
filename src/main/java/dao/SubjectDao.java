@@ -34,7 +34,7 @@ public class SubjectDao {
 		int row = 0;
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConnection();
-		PreparedStatement Stmt = conn.prepareStatement("INSERT INTO subject(subject_name, subject_time, updatedate, createdate) VALUES(?,?,NOW(),NOW()");
+		PreparedStatement Stmt = conn.prepareStatement("INSERT INTO subject(subject_name, subject_time, updatedate, createdate) VALUES(?,?,NOW(),NOW())");
 		Stmt.setString(1, subject.getSubjectName());
 		Stmt.setInt(2, subject.getSubjectTime());
 		row = Stmt.executeUpdate();
@@ -62,6 +62,7 @@ public class SubjectDao {
 		Stmt.setString(1, subject.getSubjectName());
 		Stmt.setInt(2, subject.getSubjectTime());
 		Stmt.setInt(3, subject.getSubjectNo());
+		row = Stmt.executeUpdate();
 		
 		return row; 
 	}

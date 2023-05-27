@@ -65,10 +65,10 @@
 					<%=s.getCreatedate() %>
 				</td>
 				<td>
-					<a href="<%=request.getContextPath()%>/Subject/modifySubject.jsp" >수정</a>
+					<a href="<%=request.getContextPath()%>/Subject/modifySubject.jsp?subjectNo=<%=s.getSubjectNo()%>">수정</a>
 				</td>
 				<td>
-					<a href="<%=request.getContextPath()%>/Subject/deleteSubjectAction.jsp" >삭제</a>
+					<a href="<%=request.getContextPath()%>/Subject/deleteSubjectAction.jsp?subjectNo=<%=s.getSubjectNo()%>">삭제</a>
 				</td>
 			</tr>
 		<%
