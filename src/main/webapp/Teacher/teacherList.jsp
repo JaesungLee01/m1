@@ -83,6 +83,11 @@
 		
 		int maxPage = minPage + pagePerPage - 1;
 		
+		if(maxPage > lastPage) {
+			maxPage = lastPage;
+		}
+
+		
 		if(minPage>1){
 	%>
 		<a href="<%=request.getContextPath()%>/Teacher/teacherList.jsp?currentPage=<%=minPage-pagePerPage%>">이전</a>
