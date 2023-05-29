@@ -24,7 +24,8 @@
 </head>
 <body>
 	<h1>강사 수정</h1>
-	<form action="<%=request.getContextPath()%>/Teacher/updateTeacherAction.jsp" method="post">
+	<form action="<%=request.getContextPath()%>/Teacher/updateTeacherAction.jsp
+	" method="post">
 	<table>
 		<tr>
 			<th>강사 번호</th>
@@ -35,7 +36,7 @@
 		</tr>
 		<tr>
 			<td>	
-				<input type="number" name="teacherId" readonly="readonly" value="<%=one.getTeacherNo() %>">  
+				<input type="number" name="teacherNo" readonly="readonly" value="<%=one.getTeacherNo() %>">  
 			</td>
 			<td>
 				<input type="text" name="teacherId" value="<%=one.getTeacherId() %>">  

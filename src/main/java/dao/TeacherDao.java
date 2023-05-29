@@ -43,8 +43,7 @@ public class TeacherDao {
 		stmt.setString(1, teacher.getTeacherId());
 		stmt.setString(2, teacher.getTeacherName());
 		stmt.setString(3, teacher.getTeacherHistory());
-		stmt.setString(4, teacher.getUpdatedate());
-		stmt.setInt(5, teacher.getTeacherNo());
+		stmt.setInt(4, teacher.getTeacherNo());
 		row = stmt.executeUpdate();
 		return 0;
 	}

@@ -12,8 +12,8 @@
 		response.sendRedirect(request.getContextPath()+"/Teacher/teacherList.jsp");
 		return;
 	}
-	
-	int teacherNo = Integer.getInteger(request.getParameter("teacherNo"));
+	System.out.println(request.getParameter("teacherNo") + "<-- updateTeacherId");
+	int teacherNo = Integer.parseInt(request.getParameter("teacherNo"));
 	
 	if(request.getParameter("teacherName") == null
 			|| request.getParameter("teacherId") == null

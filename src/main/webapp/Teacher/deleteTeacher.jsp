@@ -5,6 +5,7 @@
 <%@ page import = "java.util.*" %>
 <%@ page import = "java.sql.*" %>
 <%
+
 	if(request.getParameter("teacherNo") == null
 		|| request.getParameter("teacherNo").equals("")){
 		response.sendRedirect(request.getContextPath()+"/Teacher/teacherList.jsp");
