@@ -45,7 +45,7 @@ public class TeacherDao {
 		stmt.setString(3, teacher.getTeacherHistory());
 		stmt.setInt(4, teacher.getTeacherNo());
 		row = stmt.executeUpdate();
-		return 0;
+		return row;
 	}
 	
 	// 삭제
@@ -79,7 +79,7 @@ public class TeacherDao {
 	LIMIT 0, 10;
 	 */
 	public ArrayList<HashMap<String, Object>> selectTeacherListByPage(int beginRow, int rowPerPage) throws Exception{
-		ArrayList<HashMap<String, Object>> list = new ArrayList();
+		ArrayList<HashMap<String, Object>> list = new ArrayList<>();
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConnection();
 		PreparedStatement stmt = conn.prepareStatement("SELECT t.teacher_no teacherNo, t.teacher_id teacherId, t.teacher_name teacherName, ts.subject_no, NVL (GROUP_CONCAT(s.subject_name) , '없음') teacherSubjectName\r\n"
